@@ -1,18 +1,6 @@
 <?php 
-$email = $_GET['email'];
-
-
-if (str_contains($email, '@') && str_contains($email, '.')) {
-    $message = 'Thank You! Your signed up to our NewsLetters.';
-} else {
-    $message = 'Something wrong! Try to use a correct Email.';
-};
-
-var_dump($email);
-var_dump($message);
+include 'functions.php'
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,10 +8,11 @@ var_dump($message);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NewsLetter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
-    <h1>Iscriviti alle NewsLetters</h1>
-    <form action="" method="get">
+<body class="">
+    <h1 class="px-4 py-2">Iscriviti alle NewsLetters</h1>
+    <form action="" method="get" class="px-4">
         <input type="text" name="email" id="email">
         <button type="button">Subscribe</button>
 
