@@ -3,9 +3,9 @@ $email = $_GET['email'];
 
 
 if (str_contains($email, '@') && str_contains($email, '.')) {
-    $message = 'Done. Your signed up to our NewsLetters!';
+    $message = 'Thank You! Your signed up to our NewsLetters.';
 } else {
-    $message = 'Something wrong. Try to use a correct Email.';
+    $message = 'Something wrong! Try to use a correct Email.';
 };
 
 var_dump($email);
@@ -26,6 +26,10 @@ var_dump($message);
     <form action="" method="get">
         <input type="text" name="email" id="email">
         <button type="button">Subscribe</button>
+
+        <?php if (isset($message)) : ?>
+            <p><?= $message ?></p>
+        <?php endif; ?>
     </form>
 </body>
 </html>
